@@ -185,6 +185,7 @@ generateFeed = function (data) {
             // Also add the image to the content, because not all readers support media:content
             htmlContent('p').first().before('<img src="' + imageUrl + '" />');
             htmlContent('img').attr('alt', post.title);
+            htmlContent('img').css({'max-width': '100%'});
         }
 
         item.custom_elements.push({
